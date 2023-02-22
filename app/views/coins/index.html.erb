@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Moedas</h1>
+
+<div id="coins">
+  <% @coins.each do |coin| %>
+    
+    <%= coin.description %>
+    <%= coin.acronym %>
+    <%= image_tag coin.url_image, width:25, height: 25%>
+    
+    <p>
+      <%= link_to "Show this coin", coin %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New coin", new_coin_path %>
